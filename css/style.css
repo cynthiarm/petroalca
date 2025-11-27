@@ -313,7 +313,8 @@
    /* background: rgba(0,0,0,0.65);*/
 
     z-index: 1;
-    background: rgba(0, 0, 0, 0.45);
+   /* background: rgba(0, 0, 0, 0.45);*/
+    background: linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));
 }
 
 
@@ -355,7 +356,8 @@
     background:linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));*/
 
     z-index: 1;
-    background: rgba(0, 0, 0, 0.45);
+   /* background: rgba(0, 0, 0, 0.45);*/
+   background: linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));
 }
 
 
@@ -396,7 +398,8 @@
     background:linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));*/
 
     z-index: 1;
-    background: rgba(0, 0, 0, 0.45);
+   /* background: rgba(0, 0, 0, 0.45);*/
+   background: linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));
 }
 
 
@@ -438,7 +441,8 @@
     background:linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));*/
     
     z-index: 1;
-    background: rgba(0, 0, 0, 0.45);
+   /* background: rgba(0, 0, 0, 0.45);*/
+   background: linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));
 }
 
 
@@ -479,7 +483,8 @@
     background:linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));*/
 
     z-index: 1;
-    background: rgba(0, 0, 0, 0.45);
+   /* background: rgba(0, 0, 0, 0.45);*/
+   background: linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));
 }
 
 
@@ -711,6 +716,7 @@
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.45); 
+    background: linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));
     z-index: 1;
 }
 
@@ -795,6 +801,7 @@
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.45); 
+    background: linear-gradient(rgb(25 15 5 / 35%), rgba(10, 8, 25, 0.5));
     z-index: 1;
 }
 
@@ -879,6 +886,7 @@
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.45); 
+    background: linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));
     z-index: 1;
 }
 
