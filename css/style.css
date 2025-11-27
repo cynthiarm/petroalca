@@ -780,7 +780,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url('../img/cta/cta-coveraggit e.jpg') center center / cover no-repeat;
+    background: url('../img/cta/cta-coverage.jpg') center center / cover no-repeat;
     background-attachment: fixed;
 
     /* Warm filter aplicado SOLO a la imagen */
