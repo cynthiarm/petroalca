@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Petroalca LLC — Fuel Commercialization & Cross-Border Logistics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Petroalca LLC — Binational fuel commercialization and logistics between the U.S. and Mexico. Fuel importation, storage, secure transport and cross-border solutions." />
+  <meta name="keywords" content="fuel importation, ULSD, gasoline, logistics, Harlingen terminal, cross-border transport" />
+  <meta name="author" content="Petroalca LLC" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Petroalca LLC — Fuel Commercialization & Logistics" />
+  <meta property="og:description" content="Binational partner for safe, compliant and reliable fuel supply and cross-border logistics." />
+  <meta property="og:image" content="img/logo/petroalca-logo-blanco.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link href="img/favicon/favicon.ico" rel="icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Icon Fonts -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="anonymous" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Owl Carousel (if used) -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+  <!-- Your CSS (keep last so it can override) -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <style>
+    /* Small local improvements */
+    .carousel-caption { max-width: 900px; padding: 2rem 0; }
+    .carousel-caption h1 { line-height: 1.02; }
+    .btn-slide { text-decoration: none; }
+    .back-to-top { position: fixed; right: 20px; bottom: 20px; z-index: 2000; display: inline-flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; box-shadow:0 6px 18px rgba(0,0,0,.15); opacity:0; visibility:hidden; transition:all .3s ease; }
+    .back-to-top.show { opacity:1; visibility:visible; transform:translateY(0); }
+    /* spinner hide transition */
+    #spinner { transition: opacity .35s ease, visibility .35s; }
+    #spinner.hide { opacity: 0; visibility: hidden; pointer-events: none; }
+    /* Footer small-screen tweak for newsletter input */
+    @media (max-width: 576px) {
+      .footer .position-relative { max-width: 100%; }
+    }
+    /* Small accessibility focus styles */
+    a:focus, button:focus, input:focus, textarea:focus { outline: 3px solid rgba(13,110,253,0.15); outline-offset: 2px; }
+    /* Owl nav (if used) — center vertical arrows left/right */
+    .header-carousel .owl-nav { position:absolute; top:50%; left:0; right:0; transform:translateY(-50%); display:flex; justify-content:space-between; align-items:center; padding:0 1.5rem; z-index:10; }
+    .header-carousel .owl-nav button { width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,.15); color:#fff; border:1px solid rgba(255,255,255,.25); transition:all .25s ease; }
+    .header-carousel .owl-nav button:hover { background: var(--bs-primary); border-color:var(--bs-primary); }
+  </style>
+</head>
+<body>
+  <!-- Spinner -->
+  <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" role="status" aria-label="Loading">
+    <div class="spinner-grow text-primary" style="width:3rem;height:3rem;" role="status" aria-hidden="true"></div>
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm border-top border-5 border-primary sticky-top p-0" aria-label="Main navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5" href="index.html" title="Petroalca LLC">
+          <img src="img/logo/petroalca-logo-blanco.png" alt="Petroalca LLC logo" height="60" loading="lazy">
+        </a>
+        <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-3 p-lg-0 align-items-lg-center">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="services.html">Services</a>
+            <a class="nav-link" href="products.html">Products</a>
+            <a class="nav-link" href="coverage.html">Coverage</a>
+
+            <!-- Contact button aligned to the right -->
+            <a class="btn btn-primary ms-lg-3 d-flex align-items-center" href="contact.html" role="button" aria-label="Contact">
+              <i class="fa fa-headphones me-2" aria-hidden="true"></i>
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Carousel -->
+    <section class="container-fluid p-0 pb-5">
+      <div class="owl-carousel header-carousel position-relative mb-5">
+        <!-- Slide 1 -->
+        <div class="owl-carousel-item position-relative">
+          <img class="img-fluid w-100" src="img/carousel-1.jpg" alt="Fuel transportation and logistics" loading="lazy">
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6,3,21,.6);">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-lg-8">
+                  <h5 class="text-white text-uppercase mb-3" data-aos="fade-down">Fuel Transportation & Cross-Border Logistics</h5>
+                  <h1 class="display-3 text-white fw-bold mb-4" data-aos="fade-up" data-aos-delay="100">
+                    Comprehensive <span class="text-primary">Fuel Solutions</span> for the U.S.–Mexico Market
+                  </h1>
+                  <p class="fs-5 text-white mb-4" data-aos="fade-up" data-aos-delay="200">
+                    We provide integrated services in <strong>fuel importation, multimodal logistics, secure storage</strong>, and <strong>customs clearance</strong> through our Tax-Free Petro Hub.
+                  </p>
+                  <a href="services.html" class="btn btn-primary py-3 px-4 me-3" data-aos="fade-right" data-aos-delay="300">Explore Services</a>
+                  <a href="contact.html" class="btn btn-outline-light py-3 px-4" data-aos="fade-left" data-aos-delay="300">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="owl-carousel-item position-relative">
+          <img class="img-fluid w-100" src="img/carousel-2.jpg" alt="Fuel supply gasoline diesel" loading="lazy">
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6,3,21,.6);">
+            <div class="container">
+              <div class="row">
+                <div class="col-12 col-lg-8">
+                  <h5 class="text-white text-uppercase mb-3" data-aos="fade-down">Fuels We Supply</h5>
+                  <h1 class="display-3 text-white fw-bold mb-4" data-aos="fade-up" data-aos-delay="100">
+                    Reliable <span class="text-primary">Fuel Supply</span> Across Borders
+                  </h1>
+                  <p class="fs-5 text-white mb-4" data-aos="fade-up" data-aos-delay="200">
+                    Supplying <strong>Regular & Premium Gasoline</strong> and <strong>ULSD Diesel</strong> with guaranteed availability from our <strong>Harlingen, TX terminal</strong>.
+                  </p>
+                  <a href="products.html" class="btn btn-primary py-3 px-4 me-3" data-aos="fade-right" data-aos-delay="300">View Products</a>
+                  <a href="contact.html" class="btn btn-outline-light py-3 px-4" data-aos="fade-left" data-aos-delay="300">Contact Us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container-fluid overflow-hidden py-5 px-lg-0">
+      <div class="container about py-5 px-lg-0">
+        <div class="row g-5 mx-lg-0 align-items-center">
+          <div class="col-lg-6 ps-lg-0" data-aos="fade-right" data-aos-delay="100">
+            <img class="img-fluid w-100 h-100 rounded-3 shadow-sm" src="img/about.jpg" alt="Petroalca operations" loading="lazy" style="object-fit:cover; min-height:360px;">
+          </div>
+          <div class="col-lg-6 about-text" data-aos="fade-left" data-aos-delay="200">
+            <h6 class="text-secondary text-uppercase mb-3">About Us</h6>
+            <h1 class="mb-4">Petroalca LLC – Fuel Commercialization & Logistics</h1>
+            <p>Petroalca LLC is a binational company dedicated to the import and logistics of fuels between the United States and Mexico.</p>
+            <p>Our operational capacity reaches up to 30 million liters per day of gasoline and ULSD diesel, fully compliant with NOM-016 standards.</p>
+            <p>We operate under principles of transparency, legality, and alignment with national energy policy, ensuring safe and efficient delivery at every stage.</p>
+            <a href="about.html" class="btn btn-primary py-3 px-5 mt-2">More About</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Infrastructure & Facts -->
+    <section class="container-xxl py-5">
+      <div class="container py-5">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h6 class="text-secondary text-uppercase mb-3">Our Strength</h6>
+            <h2 class="mb-4">Infrastructure and Resources</h2>
+            <p>
+              We operate on <strong>125 hectares</strong> along the U.S.–Mexico border in La Barranca, Tamaulipas, with
+              <strong>500 meters of frontage</strong> at the Los Indios International Bridge in San Benito, TX. Our
+              <strong>Harlingen, TX terminal</strong> provides a <strong>500,000-barrel capacity</strong> and maintains a permanent
+              inventory of <strong>over 100 million liters</strong> ready for delivery. Supported by barges and a multimodal
+              logistics network, we ensure efficient maritime, ground, and last-mile transport.
+            </p>
+            <a href="contact.html" class="btn btn-primary py-3 px-4 mt-2">Learn More</a>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="row g-4">
+              <div class="col-sm-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="bg-primary p-4 text-center h-100 rounded">
+                  <i class="fa fa-map-marker-alt fa-2x text-white mb-3"></i>
+                  <h2 class="text-white mb-2" data-counter="125">125</h2>
+                  <p class="text-white mb-0">Hectares on U.S.–Mexico Border</p>
+                </div>
+              </div>
+              <div class="col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-secondary p-4 text-center h-100 rounded">
+                  <i class="fa fa-warehouse fa-2x text-white mb-3"></i>
+                  <h2 class="text-white mb-2" data-counter="500000">500,000</h2>
+                  <p class="text-white mb-0">Barrel Terminal Capacity</p>
+                </div>
+              </div>
+              <div class="col-sm-6" data-aos="fade-up" data-aos-delay="250">
+                <div class="bg-success p-4 text-center h-100 rounded">
+                  <i class="fa fa-gas-pump fa-2x text-white mb-3"></i>
+                  <h2 class="text-white mb-2" data-counter="100">100</h2>
+                  <p class="text-white mb-0">Million Liters Available</p>
+                </div>
+              </div>
+              <div class="col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-dark p-4 text-center h-100 rounded">
+                  <i class="fa fa-truck-moving fa-2x text-white mb-3"></i>
+                  <h2 class="text-white mb-2">24/7</h2>
+                  <p class="text-white mb-0">Multimodal logistics & delivery</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="container-fluid services pt-5">
+      <div class="container">
+        <div class="text-center pb-2" data-aos="fade-up">
+          <h6 class="text-primary text-uppercase font-weight-bold">Our Services</h6>
+          <h2 class="mb-4">Comprehensive Fuel & Logistics Solutions</h2>
+          <p class="text-muted mb-5">End-to-end services for fuel importation, multimodal logistics, secure storage, and cross-border delivery between the U.S. and Mexico.</p>
+        </div>
+
+        <div class="row pb-3">
+          <div class="col-lg-3 col-md-6 text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+            <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4 rounded-3 shadow-sm">
+              <i class="fa-solid fa-gas-pump fa-2x text-white me-3"></i>
+              <h6 class="text-white m-0">Fuel Importation</h6>
+            </div>
+            <p>Importation of gasoline and ULSD diesel under full regulatory compliance.</p>
+            <a class="border-bottom text-decoration-none" href="services.html">Read More</a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center mb-5" data-aos="fade-up" data-aos-delay="150">
+            <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4 rounded-3 shadow-sm">
+              <i class="fa-solid fa-truck-fast fa-2x text-white me-3"></i>
+              <h6 class="text-white m-0">Logistics & Transportation</h6>
+            </div>
+            <p>Multimodal transport, including certified overweight routes and cross-border logistics.</p>
+            <a class="border-bottom text-decoration-none" href="services.html">Read More</a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center mb-5" data-aos="fade-up" data-aos-delay="200">
+            <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4 rounded-3 shadow-sm">
+              <i class="fa-solid fa-warehouse fa-2x text-white me-3"></i>
+              <h6 class="text-white m-0">Secure Storage Facilities</h6>
+            </div>
+            <p>Fuel storage terminals with 24/7 monitoring and large-capacity inventory.</p>
+            <a class="border-bottom text-decoration-none" href="services.html">Read More</a>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center mb-5" data-aos="fade-up" data-aos-delay="250">
+            <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4 rounded-3 shadow-sm">
+              <i class="fa-solid fa-handshake fa-2x text-white me-3"></i>
+              <h6 class="text-white m-0">Strategic Partnerships</h6>
+            </div>
+            <p>Delivery and logistics solutions for PMI Pemex and key cross-border partners.</p>
+            <a class="border-bottom text-decoration-none" href="services.html">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="container-xxl py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h6 class="text-secondary text-uppercase">Our Products</h6>
+          <h2 class="mb-4">High-Quality Fuels We Supply</h2>
+          <p class="text-muted">Delivering premium-grade gasoline and ULSD diesel with guaranteed quality, compliance, and availability at our Harlingen, TX terminal.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="product-item p-4 shadow-sm rounded-3">
+              <div class="overflow-hidden rounded-3 mb-3">
+                <img class="img-fluid w-100" src="img/service-1.jpg" alt="Regular and Premium Gasoline" loading="lazy">
+              </div>
+              <h4 class="mb-3">Gasoline</h4>
+              <p>Regular and Premium gasoline available for immediate supply and compliant with environmental standards.</p>
+              <a class="btn-slide mt-2" href="products.html"><i class="fa fa-arrow-right me-2"></i>Read More</a>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="product-item p-4 shadow-sm rounded-3">
+              <div class="overflow-hidden rounded-3 mb-3">
+                <img class="img-fluid w-100" src="img/service-2.jpg" alt="Ultra-Low Sulfur Diesel (ULSD)" loading="lazy">
+              </div>
+              <h4 class="mb-3">Ultra-Low Sulfur Diesel (ULSD)</h4>
+              <p>Efficient, clean, and fully compliant ULSD diesel supplied directly from U.S. terminals and refineries.</p>
+              <a class="btn-slide mt-2" href="products.html"><i class="fa fa-arrow-right me-2"></i>Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competitive Advantages (dark) -->
+    <section class="container-fluid my-5 py-5" style="background-color:#0e1a26;">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+            <img src="img/feature.jpg" alt="Competitive advantages" class="img-fluid rounded-3 shadow-lg" loading="lazy">
+          </div>
+          <div class="col-lg-7 text-white" data-aos="fade-left" data-aos-delay="150">
+            <h6 class="text-primary text-uppercase fw-bold mb-3">Competitive Advantages</h6>
+            <h2 class="mb-4">Reliable Fuel Supply and Logistics You Can Trust</h2>
+            <p class="text-light mb-4">Through our strategic location and long-term partnerships with U.S. refineries, we ensure consistent, compliant, and immediate fuel supply for our clients across Mexico and the U.S. border region.</p>
+
+            <ul class="list-unstyled mb-4">
+              <li class="mb-3 d-flex align-items-start">
+                <i class="fa fa-check-circle text-primary me-3 mt-1"></i>
+                <span>Full compliance with all quality and environmental regulations.</span>
+              </li>
+              <li class="mb-3 d-flex align-items-start">
+                <i class="fa fa-warehouse text-primary me-3 mt-1"></i>
+                <span>Immediate product availability at our Harlingen, TX terminal.</span>
+              </li>
+              <li class="mb-3 d-flex align-items-start">
+                <i class="fa fa-handshake text-primary me-3 mt-1"></i>
+                <span>Guaranteed supply through strategic agreements with U.S. refineries and terminals.</span>
+              </li>
+            </ul>
+
+            <a class="btn btn-primary py-2 px-4" href="about.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coverage -->
+    <section class="container-fluid overflow-hidden py-5 px-lg-0">
+      <div class="container feature py-5 px-lg-0">
+        <div class="row g-5 mx-lg-0 align-items-center">
+          <div class="col-lg-6 feature-text" data-aos="fade-right" data-aos-delay="100">
+            <h6 class="text-primary text-uppercase mb-3">Coverage</h6>
+            <h2 class="mb-4">Strategic Operation Points & Logistics Routes</h2>
+            <p class="mb-4">Our logistics network is designed to ensure efficient, secure, and timely fuel transport between key border terminals and national distribution routes across Mexico and the United States.</p>
+
+            <h5 class="text-primary mb-3 mt-4"><i class="fa fa-map-marker-alt me-2"></i> Strategic Operation Points</h5>
+            <ul class="list-unstyled mb-4 ps-2">
+              <li class="mb-2"><i class="fa fa-warehouse text-primary me-2"></i><strong>Harlingen, TX:</strong> Main terminal with 500,000-barrel capacity.</li>
+              <li class="mb-2"><i class="fa fa-industry text-primary me-2"></i><strong>Los Indios, TX:</strong> 125-hectare property for a future exclusive terminal to Mexico.</li>
+              <li class="mb-2"><i class="fa fa-road text-primary me-2"></i><strong>Pharr / Reynosa:</strong> Border crossing with direct access to national transport routes.</li>
+              <li class="mb-2"><i class="fa fa-truck text-primary me-2"></i><strong>Brownsville / Matamoros (Los Tomates):</strong> Alternative corridor with overweight route access.</li>
+            </ul>
+
+            <h5 class="text-primary mb-3 mt-4"><i class="fa fa-route me-2"></i> Operational Routes</h5>
+            <ul class="list-unstyled ps-2">
+              <li class="mb-2"><i class="fa fa-arrow-right text-primary me-2"></i>Harlingen Port → Los Indios Bridge (15 min)</li>
+              <li class="mb-2"><i class="fa fa-arrow-right text-primary me-2"></i>Harlingen → Pharr / Reynosa (45 min)</li>
+              <li><i class="fa fa-arrow-right text-primary me-2"></i>Brownsville → Los Tomates (30 min)</li>
+            </ul>
+
+            <a href="coverage.html" class="btn btn-primary mt-3 py-2 px-4">Explore Coverage</a>
+          </div>
+
+          <div class="col-lg-6 pe-lg-0" data-aos="fade-left" data-aos-delay="150">
+            <div class="position-relative" style="height:450px;">
+              <img src="img/feature.jpg" alt="Coverage map" class="img-fluid w-100 h-100 rounded-3 shadow-lg" loading="lazy" style="object-fit:cover; opacity:.95;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote / Form -->
+    <section class="container-fluid quote py-5">
+      <div class="container py-5">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+            <h6 class="text-secondary text-uppercase mb-3">Get a Quote</h6>
+            <h2 class="mb-4">Request Your Free Quote Today</h2>
+            <p class="mb-4">Looking for a reliable logistics or fuel supply partner? Tell us your needs and our team will deliver a tailored solution with competitive rates and guaranteed efficiency.</p>
+
+            <div class="d-flex align-items-center">
+              <i class="fa fa-headphones fa-2x bg-primary text-white p-3 rounded-circle me-3"></i>
+              <div>
+                <h6 class="mb-0">Call us for inquiries</h6>
+                <strong class="text-primary">+1 (956) 000-0000</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="150">
+            <div class="quote-box text-center p-4 shadow-sm rounded-3">
+              <form id="quoteForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-12 col-sm-6">
+                    <input required type="text" class="form-control border-0 shadow-sm" placeholder="First Name" aria-label="First name" style="height:55px;">
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input required type="text" class="form-control border-0 shadow-sm" placeholder="Last Name" aria-label="Last name" style="height:55px;">
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input required type="email" class="form-control border-0 shadow-sm" placeholder="Email Address" aria-label="Email" style="height:55px;">
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input required type="tel" class="form-control border-0 shadow-sm" placeholder="Phone Number" aria-label="Phone" style="height:55px;">
+                  </div>
+                  <div class="col-12">
+                    <textarea required class="form-control border-0 shadow-sm" placeholder="Tell us about your requirements" rows="4" aria-label="Message"></textarea>
+                  </div>
+                  <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3" type="submit">Get My Quote</button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Simple success message (hidden by default) -->
+              <div id="quoteSuccess" class="alert alert-success mt-3 d-none" role="alert">
+                Thank you — your request has been received. We will contact you shortly.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container-fluid bg-dark text-light footer pt-5" aria-labelledby="footerHeading">
+    <h2 id="footerHeading" class="visually-hidden">Footer</h2>
+    <div class="py-5 px-sm-3 px-md-5">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-3 col-md-6 text-center text-md-start">
+          <a href="index.html" title="Petroalca Home">
+            <img src="img/logo/petroalca-logo - footer.png" alt="Petroalca footer logo" height="80" loading="lazy">
+          </a>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-3">Office</h4>
+          <p class="mb-1"><i class="fa fa-map-marker-alt me-2"></i>4900 W Expressway 83, Suite 215, McAllen, TX 78501</p>
+          <p class="mb-0"><i class="fa fa-envelope me-2"></i><a class="text-light" href="mailto:info@PetroalcaLLC.com">info@PetroalcaLLC.com</a></p>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-3">Quick Links</h4>
+          <a class="btn btn-link" href="about.html">About Us</a><br>
+          <a class="btn btn-link" href="services.html">Services</a><br>
+          <a class="btn btn-link" href="products.html">Products</a><br>
+          <a class="btn btn-link" href="contact.html">Contact</a>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-3">Newsletter</h4>
+          <p class="mb-2">Subscribe for updates and industry insights.</p>
+          <div class="position-relative" style="max-width:360px;">
+            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email" aria-label="Newsletter email">
+            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" aria-label="Subscribe">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid text-white border-top py-3" style="border-color:#7f7f7f!important;">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start">
+          <small>&copy; 2025 Petroalca LLC. All Rights Reserved. Designed by Devise IS.</small>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <a href="privacy.html" class="text-white me-3">Privacy Policy</a>
+          <a href="terms.html" class="text-white">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#" class="back-to-top btn btn-primary" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript libs -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="lib/waypoints/waypoints.min.js" defer></script>
+  <script src="lib/counterup/counterup.min.js" defer></script>
+
+  <!-- Template JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Hide spinner after load
+      const spinner = document.getElementById('spinner');
+      if (spinner) {
+        spinner.classList.add('hide');
+        setTimeout(() => spinner.remove(), 400);
+      }
+
+      // Initialize AOS
+      if (window.AOS) {
+        AOS.init({
+          duration: 800,
+          once: true,
+          easing: 'ease-in-out'
+        });
+      }
+
+      // Initialize Owl Carousel (header-carousel)
+      if (jQuery && jQuery().owlCarousel) {
+        $('.header-carousel').owlCarousel({
+          autoplay: false,
+          smartSpeed: 1200,
+          items: 1,
+          dots: false,
+          loop: true,
+          nav: true,
+          navText: ['<i class="bi bi-chevron-left"></i>', '<i class="bi bi-chevron-right"></i>']
+        });
+      }
+
+      // CounterUp (simple integration)
+      if (window.waypoint && typeof Waypoint === 'function') {
+        document.querySelectorAll('[data-counter]').forEach(function(el) {
+          const endVal = parseInt(el.getAttribute('data-counter')) || 0;
+          // basic animation using counterUp lib if present
+          if (window.counterUp) {
+            counterUp(el, { duration: 1200, delay: 16 });
+          } else {
+            // fallback: instant set
+            el.innerText = endVal;
+          }
+        });
+      }
+
+      // Back to top show/hide
+      const backToTop = document.querySelector('.back-to-top');
+      const toggleBack = function() {
+        if (window.scrollY > 250) backToTop.classList.add('show');
+        else backToTop.classList.remove('show');
+      };
+      window.addEventListener('scroll', toggleBack);
+      toggleBack();
+
+      // Smooth scroll for back-to-top
+      backToTop.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Simple client-side form handling for quote form (no backend)
+      const quoteForm = document.getElementById('quoteForm');
+      const quoteSuccess = document.getElementById('quoteSuccess');
+      if (quoteForm) {
+        quoteForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          // Basic validation
+          const valid = Array.from(quoteForm.querySelectorAll('[required]')).every(i => i.value.trim() !== '');
+          if (!valid) {
+            alert('Please complete all required fields.');
+            return;
+          }
+          // simulate successful submit
+          quoteForm.reset();
+          quoteSuccess.classList.remove('d-none');
+          quoteForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+      }
+    });
+  </script>
+
+  <!-- Local JS (if any) -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>

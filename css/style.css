@@ -1,0 +1,1737 @@
+/********** Template CSS **********/
+:root {
+    --primary: #fa3312;
+    --secondary: #51CFED;
+    --light: #F8F2F0;
+    --dark: #060315;
+}
+
+.fw-medium {
+    font-weight: 600 !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*** Button ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn.btn-primary,
+.btn.btn-secondary {
+    color: #FFFFFF;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+/*** Navbar ***/
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    position: relative;
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar .logo img {
+    width: 200px;
+    
+}
+
+.navbar-nav .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* espacio entre icono y texto */
+    padding: 0.75rem 1.5rem; /* ajusta el alto al de los demás enlaces */
+  }
+  
+  .navbar-nav .btn i {
+    font-size: 1.2rem; /* tamaño más equilibrado */
+    padding: 0; /* elimina padding adicional */
+  }
+
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-nav .nav-link  {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-light .navbar-nav {
+        border-top: 1px solid #EEEEEE;
+    }
+}
+
+.navbar-light .navbar-brand,
+.navbar-light a.btn {
+    height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.navbar-light.sticky-top {
+    top: -100px;
+    transition: .5s;
+}
+
+@media (min-width: 992px) {
+    .navbar-light .navbar-nav .nav-link::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 5px;
+        top: -6px;
+        left: 50%;
+        background: #FFFFFF;
+        transition: .5s;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover::before,
+    .navbar-light .navbar-nav .nav-link.active::before {
+        width: 100%;
+        left: 0;
+    }
+
+    .navbar-light .navbar-nav .nav-link.nav-contact::before {
+        display: none;
+    }
+
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Header ***/
+@media (max-width: 768px) {
+    .header-carousel .owl-carousel-item {
+        position: relative;
+        min-height: 500px;
+        
+    }
+    
+    .header-carousel .owl-carousel-item img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+
+    .header-carousel .owl-carousel-item h5,
+    .header-carousel .owl-carousel-item p {
+        font-size: 14px !important;
+        font-weight: 400 !important;
+    }
+
+    .header-carousel .owl-carousel-item h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+}
+
+.header-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between; /* separa izquierda y derecha */
+    align-items: center;
+    padding: 0 40px; /* distancia al borde */
+    z-index: 10;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 45px;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+
+.owl-carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* background: linear-gradient(rgba(25, 15, 5, 0.6), rgba(10, 8, 25, 0.2));*/
+    background:linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));
+     /* coherente con cta-index */
+
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* 🔥 Warm Filter aplicado SOLO a la imagen del carrusel */
+.header-carousel .owl-carousel-item img.warm-filter {
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+    transition: filter 0.4s ease-in-out;
+    z-index: 0 !important; /* detrás del overlay y texto */
+}
+
+/* 🔥 Warm Filter aplicado SOLO a la imagen del carrusel */
+.header-carousel .owl-carousel-item img.warm-filter {
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+    transition: filter 0.4s ease-in-out;
+    z-index: 0 !important; /* detrás del overlay y texto */
+}
+
+
+/* Asegurar que overlay + texto estén arriba */
+.header-carousel .owl-carousel-item::after {
+    z-index: 1 !important;
+}
+
+.header-carousel .owl-carousel-item > div {
+    position: relative;
+    z-index: 2 !important; /* textos */
+}
+
+/* =======================================
+   🔥 PAGE HEADER about con warm filter igual al CTA
+======================================= */
+.page-header {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* 🔥 Imagen con warm filter — MISMO que CTA */
+.page-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/pageheader/about-pageheader.jpg') center center / cover no-repeat;
+
+    /* 💯 Mismo filtro que tu .cta-index */
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+
+    z-index: 0;
+}
+
+/* 🌑 Overlay oscuro suave — igual estilo */
+.page-header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+   /* background: rgba(0,0,0,0.65);*/
+
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* 📌 Texto encima */
+.page-header .container {
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =======================================
+   🔥 PAGE HEADER services
+======================================= */
+.page-header2 {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* 🔥 Imagen con warm filter — MISMO que CTA */
+.page-header2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/pageheader/services-pageheader.jpg') center center / cover no-repeat;
+
+    /* 💯 Mismo filtro que tu .cta-index */
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+
+    z-index: 0;
+}
+
+/* 🌑 Overlay oscuro suave — igual estilo */
+.page-header2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+   /* background: rgba(0,0,0,0.65);
+    background:linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));*/
+
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* 📌 Texto encima */
+.page-header2 .container {
+    position: relative;
+    z-index: 5;
+}
+  
+/* =======================================
+   🔥 PAGE HEADER products
+======================================= */
+.page-header3 {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* 🔥 Imagen con warm filter — MISMO que CTA */
+.page-header3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/pageheader/products-pageheader.jpg') center center / cover no-repeat;
+
+    /* 💯 Mismo filtro que tu .cta-index */
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+
+    z-index: 0;
+}
+
+/* 🌑 Overlay oscuro suave — igual estilo */
+.page-header3::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+   /* background: rgba(0,0,0,0.65);
+    background:linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));*/
+
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* 📌 Texto encima */
+.page-header3 .container {
+    position: relative;
+    z-index: 5;
+}
+
+ /* =======================================
+   🔥 PAGE HEADER contact
+======================================= */ 
+
+.page-header4 {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* 🔥 Imagen con warm filter — MISMO que CTA */
+.page-header4::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/pageheader/covergae-ph.jpg') center center / cover no-repeat;
+
+    /* 💯 Mismo filtro que tu .cta-index */
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+
+    z-index: 0;
+}
+
+/* 🌑 Overlay oscuro suave — igual estilo */
+.page-header4::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+   /* background: rgba(0,0,0,0.65);
+    background:linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));*/
+    
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* 📌 Texto encima */
+.page-header4 .container {
+    position: relative;
+    z-index: 5;
+}
+ /* =======================================
+   🔥 PAGE HEADER terms and privacy
+======================================= */ 
+
+.page-header5 {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* 🔥 Imagen con warm filter — MISMO que CTA */
+.page-header5::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/pageheader/termsprivacy-ph.jpg') center center / cover no-repeat;
+
+    /* 💯 Mismo filtro que tu .cta-index */
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+
+    z-index: 0;
+}
+
+/* 🌑 Overlay oscuro suave — igual estilo */
+.page-header5::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+   /* background: rgba(0,0,0,0.65);
+    background:linear-gradient(rgba(25, 15, 5, 0.2), rgba(10, 8, 25, 0.5));*/
+
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* 📌 Texto encima */
+.page-header5 .container {
+    position: relative;
+    z-index: 5;
+}
+
+
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--light);
+}
+
+.breadcrumb  {
+    font-size: 1.3rem;
+}
+
+.about-logo{
+    align-content: center;
+}
+
+.privacy-logo {
+
+    align-content: center;
+}
+  
+/*** About ***/
+@media (min-width: 992px) {
+    .container.about {
+        max-width: 100% !important;
+    }
+
+    .about-text  {
+        padding-right: calc(((100% - 960px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-text  {
+        padding-right: calc(((100% - 1140px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1400px) {
+    .about-text  {
+        padding-right: calc(((100% - 1320px) / 2) + .75rem);
+    }
+}
+
+
+/*** Feature ***/
+@media (min-width: 992px) {
+    .container.feature {
+        max-width: 100% !important;
+    }
+
+    .feature-text  {
+        padding-left: calc(((100% - 960px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    .feature-text  {
+        padding-left: calc(((100% - 1140px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1400px) {
+    .feature-text  {
+        padding-left: calc(((100% - 1320px) / 2) + .75rem);
+    }
+}
+
+.services{
+    background-color: #F2F2F4 !important;
+}
+
+/*** Service, Price & Team ***/
+.product-item,
+.service-item,
+.price-item,
+.team-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+}
+
+.product-item img,
+.service-item img,
+.team-item img {
+    transition: .5s;
+}
+
+.product-item:hover img,
+.service-item:hover img,
+.team-item:hover img {
+    transform: scale(1.1);
+}
+
+.product-item a.btn-slide,
+.service-item a.btn-slide,
+.price-item a.btn-slide,
+.team-item div.btn-slide {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.product-item a.btn-slide i,
+.product-item a.btn-slide span,
+.service-item a.btn-slide i,
+.service-item a.btn-slide span,
+.price-item a.btn-slide i,
+.price-item a.btn-slide span,
+.team-item div.btn-slide i,
+.team-item div.btn-slide span {
+    position: relative;
+    height: 40px;
+    padding: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: var(--primary);
+    border-radius: 0 35px 35px 0;
+    transition: .5s;
+    z-index: 2;
+}
+
+.team-item div.btn-slide span a i {
+    padding: 0 10px;
+}
+
+.team-item div.btn-slide span a:hover i {
+    background: var(--secondary);
+}
+
+.product-item a.btn-slide span,
+.service-item a.btn-slide span,
+.price-item a.btn-slide span,
+.team-item div.btn-slide span {
+    padding-left: 0;
+    left: -100%;
+    z-index: 1;
+}
+
+.product-item:hover a.btn-slide i,
+.service-item:hover a.btn-slide i,
+.price-item:hover a.btn-slide i,
+.team-item:hover div.btn-slide i {
+    border-radius: 0;
+}
+
+.product-item:hover a.btn-slide span,
+.service-item:hover a.btn-slide span,
+.price-item:hover a.btn-slide span,
+.team-item:hover div.btn-slide span {
+    left: 0;
+}
+
+.product-item a.btn-slide:hover i,
+.product-item a.btn-slide:hover span,
+.service-item a.btn-slide:hover i,
+.service-item a.btn-slide:hover span,
+.price-item a.btn-slide:hover i,
+.price-item a.btn-slide:hover span {
+    background: var(--secondary);
+}
+
+
+/*** products ***/
+.product-item img {
+    transition: transform 0.5s ease;
+   /* border-radius: 8px;*/
+}
+
+.product-item:hover img {
+    transform: scale(1.05);
+}
+
+.producte-item {
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.product-item:hover {
+    background: #f8f9fa;
+}
+/*** calltoaction ***/
+.cta{
+    background-color: #F2F2F4 !important;
+}
+
+/*** calltoaction about ***/
+/* =======================================
+   🔷 PETROALCA – CTA Section (Optimized)
+   ======================================= */
+
+/* =======================================
+   🔷 PETROALCA – CTA Section (Optimized)
+======================================= */
+.cta-about {
+    position: relative;
+    z-index: 0;
+    padding: 90px 0;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+  
+/* Capa con warm filter SOLO para la imagen */
+.cta-about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/cta/about-cta.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+
+    /* Warm filter aplicado SOLO a la imagen */
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+
+    z-index: 0;
+}
+
+/* 🌑 Overlay oscuro suave para mejorar legibilidad */
+.cta-about::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); 
+    z-index: 1;
+}
+
+/* 📌 Todo el contenido siempre por encima */
+.cta-about * {
+    position: relative;
+    z-index: 5;
+}
+  
+/* --- TEXTOS --- */
+.cta-about h6 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fcbf49;
+    margin-bottom: 1rem;
+}
+
+.cta-about h2 {
+    font-weight: 800;
+    font-size: 2.6rem;
+    text-shadow: 0 5px 12px rgba(0,0,0,0.7);
+}
+
+.cta-about p {
+    max-width: 850px;
+    margin: 0 auto 2rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+}
+
+/* Ícono */
+.cta-about i {
+    font-size: 2.4rem;
+    color: #fcbf49;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
+}
+
+
+  /* 🔸 Botones */
+.cta-about .btn-primary {
+
+    z-index: 0;
+}
+
+  /* 🔹 Responsive */
+@media (max-width: 768px) {
+    .cta-about h2 { font-size: 2rem; }
+    .cta-about p { font-size: 1rem; }
+}
+
+/* =======================================
+   🔷 PETROALCA – CTA coverage Section (Optimized)
+   ======================================= */
+.cta-coverage {
+    position: relative;
+    z-index: 0;
+    padding: 90px 0;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+  
+/* Capa con warm filter SOLO para la imagen */
+.cta-coverage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/cta/cta-coveraggit e.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+
+    /* Warm filter aplicado SOLO a la imagen */
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+
+    z-index: 0;
+}
+
+/* 🌑 Overlay oscuro suave para mejorar legibilidad */
+.cta-coverage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); 
+    z-index: 1;
+}
+
+/* 📌 Todo el contenido siempre por encima */
+.cta-coverage * {
+    position: relative;
+    z-index: 5;
+}
+  
+/* --- TEXTOS --- */
+.cta-coverage h6 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fcbf49;
+    margin-bottom: 1rem;
+}
+
+.cta-coverage h2 {
+    font-weight: 800;
+    font-size: 2.6rem;
+    text-shadow: 0 5px 12px rgba(0,0,0,0.7);
+}
+
+.cta-coverage p {
+    max-width: 850px;
+    margin: 0 auto 2rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+}
+
+/* Ícono */
+.cta-coverage i {
+    font-size: 2.4rem;
+    color: #fcbf49;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
+}
+
+
+  /* 🔸 Botones */
+.cta-coverage .btn-primary {
+
+    z-index: 0;
+}
+
+  /* 🔹 Responsive */
+@media (max-width: 768px) {
+    .cta-coverage h2 { font-size: 2rem; }
+    .cta-coverage p { font-size: 1rem; }
+}
+/* =======================================
+   🔷 PETROALCA – CTA (Image Warm Filter)
+   ======================================= */
+.cta-index {
+    position: relative;
+    z-index: 0;
+    padding: 90px 0;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* 🔥 Imagen con warm filter — SOLO AQUÍ */
+.cta-index::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../img/cta/cta-index.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+
+    /* Warm filter aplicado SOLO a la imagen */
+   /* filter: sepia(45%) saturate(130%) brightness(88%) contrast(115%) hue-rotate(-12deg);*/
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+
+    z-index: 0;
+}
+
+/* 🌑 Overlay oscuro suave para mejorar legibilidad */
+.cta-index::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); 
+    z-index: 1;
+}
+
+/* 📌 Todo el contenido siempre por encima */
+.cta-index * {
+    position: relative;
+    z-index: 5;
+}
+
+/* --- TEXTOS --- */
+.cta-index h6 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fcbf49;
+    margin-bottom: 1rem;
+}
+
+.cta-index h2 {
+    font-weight: 800;
+    font-size: 2.6rem;
+    text-shadow: 0 5px 12px rgba(0,0,0,0.7);
+}
+
+.cta-index p {
+    max-width: 850px;
+    margin: 0 auto 2rem;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.7);
+}
+
+/* Ícono */
+.cta-index i {
+    font-size: 2.4rem;
+    color: #fcbf49;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.6));
+}
+
+/* Botones */
+.cta-index .btn {
+    border-radius: 50px;
+    font-weight: 600;
+    transition: .3s ease;
+}
+
+.cta-index .btn-primary {
+    background-color: #fcbf49;
+    border: none;
+    color: #1a1a1a;
+}
+
+.cta-index .btn-primary:hover {
+    background-color: #ffd86a;
+}
+
+.cta-index .btn-outline-light {
+    border: 2px solid #fff;
+}
+
+.cta-index .btn-outline-light:hover {
+    background-color: #fcbf49;
+    border-color: #fcbf49;
+    color: #1a1a1a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cta-index h2 { font-size: 2rem; }
+    .cta-index p { font-size: 1rem; }
+}
+
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+/*** end calltoaction ***/
+
+/*** quote ***/
+.quote{
+    background-color: #F2F2F4 !important;
+}
+.quote-box{
+    background-color: #f0e0db !important;
+}
+
+/*** endquote ***/
+  
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+  
+.list-inline-item {
+    display: inline-block;
+}
+  
+.list-inline-item:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-item .testimonial-item {
+    position: relative;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    animation: pulse 1s ease-out .5s;
+}
+
+.testimonial-carousel .owl-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: var(--primary);
+    border: 5px solid var(--light);
+    border-radius: 15px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    background: var(--light);
+    border-color: var(--primary);
+}
+
+
+/*** Contact ***/
+@media (min-width: 992px) {
+    .container.contact-page {
+        max-width: 100% !important;
+    }
+
+    .contact-page .contact-form  {
+        padding-left: calc(((100% - 960px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    .contact-page .contact-form  {
+        padding-left: calc(((100% - 1140px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1400px) {
+    .contact-page .contact-form  {
+        padding-left: calc(((100% - 1320px) / 2) + .75rem);
+    }
+}
+
+.contact-box{
+    background-color: #f0e0db !important;
+}
+
+/*** Footer ***/
+.footer {
+  /*  background: linear-gradient(rgba(6, 3, 21, .5), rgba(6, 3, 21, .5)), url(../img/map.png) center center no-repeat;*/
+    background-size: cover;
+   /* background-color: #0e1a26!important;*/
+    background-color: #000000!important;
+}
+
+.footer .btn.btn-social {
+    margin-right: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    border: 1px solid #FFFFFF;
+    border-radius: 35px;
+    transition: .3s;
+}
+
+.footer .btn.btn-social:hover {
+    color: var(--primary);
+}
+
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: .3s;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn.btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    font-size: 15px;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: var(--light);
+}
+
+
+.footer .col-md-6 {
+    min-height: 200px; /* iguala alturas */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente el contenido */
+}
+  
+.footer .footer-logo img {
+    max-width: 350px;
+    height: auto;
+}
+  
+.footer .btn-link {
+    color: #ccc;
+    text-align: left;
+    padding-left: 0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+  
+.footer .btn-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+  
+/* Reduce espacio vertical si el footer queda muy alto */
+.footer {
+    line-height: 1.6;
+}
+  
+/* Uniform gap entre columnas en todas las pantallas */
+.footer .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+}
+.footer .col-lg-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*** blue tittles ***/
+.about-text h6,
+.cta-index h6,
+.services-tittle h6,
+.products h6,
+.advantages h6,
+.advantages i,
+.quote-tittle h6,
+.cta-about h6,
+.coverage h6{
+    color: #51CFED !important;
+    font-size: 1.2rem!important;
+}
+
+.about-section {
+    background-color: #f8f9fa;
+}
+  
+.about-text h2 {
+    color: #0d1b2a;
+    line-height: 1.3;
+}
+  
+.about-text p {
+    color: #555;
+    font-size: 1.05rem;
+}
+  
+.about-section .btn-primary {
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+  
+.about-section .btn-primary:hover {
+    background-color: #0d6efd;
+    transform: translateY(-3px);
+}
+  
+.about-overlay {
+    background: rgba(13, 27, 42, 0.25);
+    transition: background 0.4s ease;
+}
+  
+.about-section img:hover + .about-overlay {
+    background: rgba(13, 27, 42, 0.45);
+}
+
+.header-carousel {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+  
+.about {
+    margin-top: 0 !important;
+    padding-top: 2rem !important; /* o 1rem según tu gusto */
+}
+
+.about-img {
+    height: 100%;
+    min-height: 420px;         /* Altura mínima para mantener presencia visual */
+    max-height: 520px;         /* Limita el crecimiento en pantallas muy grandes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* Cubre bien el espacio sin deformarse */
+   /* border-radius: 0 20px 20px 0; /* Redondeo elegante solo del lado derecho */
+    transition: transform 0.5s ease;
+}
+  
+.about-img img:hover {
+    transform: scale(1.05);   /* Pequeño zoom al pasar el mouse */
+}
+
+/* =========================================================
+   🟤 COMPETITIVE ADVANTAGES
+========================================================= */
+
+/* Imagen principal de la sección Advantages */
+/* ================================
+   🔷 ADVANTAGES – Image Styling
+   ================================ */
+
+/* Contenedor de imagen */
+.advantages-img {
+    height: 100%;
+    min-height: 420px;
+    max-height: 500px;
+    overflow: hidden;
+    border-radius: 12px; /* más moderno */
+    position: relative;
+}
+
+/* Imagen base con warm filter */
+.advantages-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease, filter .6s ease;
+
+    /* Warm filter consistente con tu marca */
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+}
+
+/* Hover más suave y profesional */
+.advantages-img:hover img {
+    transform: scale(1.06);
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+}
+
+/* Sombra elegante */
+.advantages-img {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.advantages h6,
+.advantages i,
+.advantages-icon {
+    color: #51CFED !important;
+    font-size: 1.2rem!important;
+}
+
+/* =========================================================
+   🟤 COMPETITIVE ADVANTAGES
+========================================================= */
+
+/* =========================================================
+   BASE — efecto premium image-stack (compartido por ambas)
+   ========================================================= */
+
+.coverage-img,
+.coverage-img2 {
+       position: relative;
+       width: 100%;
+       height: 400px;
+}
+   
+.coverage-img img,
+.coverage-img2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+   
+    /* Filtro cálido */
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(105%) hue-rotate(-10deg);
+    transition: 
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.6s ease,
+    filter 0.4s ease;
+}
+   
+/* Sombras básicas */
+.coverage-img .img-top,
+.coverage-img .img-bottom,
+.coverage-img2 .img-top,
+.coverage-img2 .img-bottom {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+}
+   
+/* Hover individual (zoom + lift) */
+.coverage-img .img-top:hover img,
+.coverage-img .img-bottom:hover img,
+.coverage-img2 .img-top:hover img,
+.coverage-img2 .img-bottom:hover img {
+    transform: scale(1.05) translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+    /* filter: brightness(1.05) contrast(1.05);*/
+}
+   
+/* Asegurar que la imagen hoverea sobre la otra */
+.coverage-img .img-top:hover,
+.coverage-img .img-bottom:hover,
+.coverage-img2 .img-top:hover,
+.coverage-img2 .img-bottom:hover {
+    z-index: 10;
+}
+   
+/* =========================================================
+OPCIÓN A — coverage-img2  
+(TOP IZQUIERDA — BOTTOM DERECHA)
+========================================================= */
+   
+.coverage-img2 .img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65%;
+    z-index: 2;
+    overflow: hidden;
+    transform: translate(15px, 15px);
+    transition:
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.6s ease;
+}
+   
+.coverage-img2 .img-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    z-index: 1;
+    overflow: hidden;
+    transform: translate(-20px, -20px);
+    transition:
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.6s ease;
+}
+   
+/* Hover container (movement) */
+.coverage-img2:hover .img-top {
+    transform: translate(10px, 5px) scale(1.03);
+}
+.coverage-img2:hover .img-bottom {
+    transform: translate(-25px, -25px) scale(1.03);
+}
+
+/* Swiper Infrastructure Style */
+/* ===== Inline adjustments for the Swiper galleries ===== */
+.infraSwiper,
+.infraSwiper2 {
+    width: 100%;
+    height: 380px;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+
+}
+
+.infra-slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.infra-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+    display: block;
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(105%) hue-rotate(-10deg);
+}
+
+.infra-slide:hover img {
+    transform: scale(1.06);
+}
+
+.infra-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 22px 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.55), transparent);
+}
+
+.infra-overlay span {
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+/* Make sure pagination and nav are visible above images */
+.swiper-pagination {
+    z-index: 30;
+    bottom: 12px !important;
+}
+
+.swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.8);
+    width: 9px;
+    height: 9px;
+    opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fa3312;
+    opacity: 1;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    z-index: 30;
+}
+
+/* Slight responsive tweak */
+@media (max-width: 992px) {
+    .infraSwiper,
+    .infraSwiper2 {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .infraSwiper,
+    .infraSwiper2 {
+        height: 220px;
+    }
+
+    .infra-overlay {
+        padding: 12px 10px;
+    }
+
+    .infra-overlay span {
+        font-size: 0.95rem;
+    }
+}
+/* =========================================================
+OPCIÓN B — coverage-img  
+(TOP DERECHA — BOTTOM IZQUIERDA)
+========================================================= */
+   
+.coverage-img .img-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    z-index: 2;
+    overflow: hidden;
+    transform: translate(-15px, 15px);
+    transition:
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.6s ease;
+}
+   
+.coverage-img .img-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    z-index: 1;
+    overflow: hidden;
+    transform: translate(15px, -20px);
+    transition:
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.6s ease;
+}
+   
+/* Hover container (movement) */
+.coverage-img:hover .img-top {
+    transform: translate(-10px, 5px) scale(1.03);
+}
+.coverage-img:hover .img-bottom {
+    transform: translate(20px, -25px) scale(1.03);
+}
+
+.coverage .coverage i {
+   color: #fa3312 !important;; 
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+   
+.coverage-img .img-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    z-index: 2;
+    overflow: hidden;
+    transform: translate(-15px, 15px);
+    transition:
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.6s ease;
+}
+   
+.coverage-img .img-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    transform: translate(195px, -100px);
+    transition:
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.6s ease;
+}
+   
+/* Hover container (movement) */
+.coverage-img:hover .img-top {
+    transform: translate(-10px, 5px) scale(1.03);
+}
+.coverage-img:hover .img-bottom {
+    transform: translate(20px, -25px) scale(1.03);
+}
+
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+   
+@media (max-width: 991px) {
+   
+    .coverage-img,
+    .coverage-img2 {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+   
+    .coverage-img .img-top,
+    .coverage-img .img-bottom,
+    .coverage-img2 .img-top,
+    .coverage-img2 .img-bottom {
+        position: relative;
+        width: 100%;
+        transform: none !important;
+        z-index: auto;
+    }
+   
+    .coverage-img img,
+    .coverage-img2 img {
+        height: 260px;
+    }
+}
+/* =========================================================
+   ⚙️ VISUAL UNIFICATION
+========================================================= */
+
+
+
+/* 🔸 Overlay cálido con degradado cobre–ámbar */
+
+.warm-filter {
+    filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
+    transition: filter 0.5s ease-in-out;
+}  
+
+.warm-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(120, 60, 20, 0.35),
+      rgba(255, 200, 100, 0.2)
+    );
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    z-index: 1;
+}
+  
+  /* 🔸 Efecto suave al pasar el cursor */
+.warm-overlay:hover .warm-filter {
+    filter: sepia(55%) saturate(140%) brightness(95%) contrast(110%) hue-rotate(-15deg);
+}
+
+
+/* ===== NAVBAR GENERAL ===== */
+.main-nav {
+    background:transparent;
+    backdrop-filter: blur(8px);
+    padding: 0.8rem 0;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-nav-dark {
+    background: #000 !important;
+    backdrop-filter: blur(8px);
+    padding: 0.8rem 0;
+    transition: all 0.4s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+  
+.main-nav.scrolled {
+    background: #000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+  
+/* ===== LOGO ===== */
+.nav-logo {
+    height: 58px;
+    transition: transform 0.3s ease;
+}
+  
+.nav-logo:hover {
+    transform: scale(1.05);
+}
+  
+/* ===== LINKS ===== */
+.navbar-nav .nav-link {
+    color: #d8e0ea;
+    margin: 0 12px;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+  
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #fff;
+}
+  
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+  
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+  
+  /* ===== CONTACT BUTTON ===== */
+.btn-contact {
+    background: #fa3312;
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 0px;
+    padding: 0.75rem 1.8rem; /* ← más alto y más ancho */
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+   /* box-shadow: 0 3px 12px rgba(0, 187, 255, 0.034);*/
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+}
+  
+.btn-contact:hover {
+    background: transparent;
+    color: #fa3312 !important;
+    border-color: #fa3312;
+    transform: translateY(-2px);
+    /*box-shadow: 0 4px 16px rgba(0, 186, 255, 0.35);*/
+}
+  
+/* Responsive ajustes */
+@media (max-width: 991px) {
+    .btn-contact {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 0.8rem;
+      padding: 0.8rem 1.6rem; /* un poco más grande en móvil también */
+    }
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 991px) {
+    .navbar-nav {
+      background: transparent;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 0.5rem;
+    }
+  
+    .btn-contact {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 0.8rem;
+    }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+

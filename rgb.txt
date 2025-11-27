@@ -1,0 +1,3 @@
+#fa3312 rojo
+#404040 gris oscuro
+#7f7f7f gris claro
