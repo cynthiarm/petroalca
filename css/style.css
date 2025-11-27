@@ -421,7 +421,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url('../img/pageheader/covergae-ph.jpg') center center / cover no-repeat;
+    background: url('../img/pageheader/coverage-ph.jpg') center center / cover no-repeat;
 
     /* 💯 Mismo filtro que tu .cta-index */
     filter: sepia(35%) saturate(100%) brightness(70%) contrast(100%) hue-rotate(-10deg);
