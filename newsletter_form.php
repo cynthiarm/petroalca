@@ -9,8 +9,7 @@ require 'PHPMailer/SMTP.php';
 $mail = new PHPMailer(true);
 
 try {
-    // Captura de campos
-   // $type  = isset($_POST['type']) ? intval($_POST['type']) : 1; // 1=ES, 2=EN // 
+
     $email = isset($_POST['newsletter_email']) ? trim($_POST['newsletter_email']) : '';
 
 
@@ -20,15 +19,15 @@ try {
     $mail->Debugoutput = 'html';
     $mail->Host       = 'petroalca.com';
     $mail->SMTPAuth   = true;
-    $mail->Username   = 'noreply@petroalca.com';
-    $mail->Password   = 'Petro20#25#';
+    $mail->Username   = 'info@petroalca.com';
+    $mail->Password   = 's$7PRu(It0}o';
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
 
     // Remitente y destinatario
-    $mail->setFrom('noreply@petroalca.com', 'Petroalca LLC');
+    $mail->setFrom('info@petroalca.com', 'Petroalca LLC');
     $mail->addAddress($email); // enviarlo al suscriptor
-    $mail->addReplyTo('info@petroalca.com', 'Petroalca LLC');
+    $mail->addReplyTo('Leslyrr@yahoo.com.mx', 'Petroalca LLC');
     
     $mail->isHTML(true);
     $mail->CharSet = 'UTF-8';
@@ -39,7 +38,7 @@ try {
 
     $template = file_get_contents(__DIR__ . '/newsletter_welcome_en.html');
     $mail->Subject = "🎉 Thanks for subscribing to Petroalca LLC!";
-    $defaultName = "Friend";
+    $defaultName = $email;
     
 
     // Reemplazar variables dinámicas

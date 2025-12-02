@@ -1729,6 +1729,102 @@ RESPONSIVE
       margin-top: 0.8rem;
     }
 }
+
+/*** newsletter  ***/
+.newsletter_form .validation {
+    font-size: 16px;
+    color: #db4141;
+    margin-bottom: 10px !important;
+    margin-top: 10px;
+  
+}
+  
+.newsletter_form input::placeholder {
+    font-size: 13px;
+    color: #919191;
+}
+  
+.newsletter_form input::placeholder {
+    font-size: 16px;
+    color: #919191;
+}
+/*** contact  ***/
+.contactForm .validation {
+    font-size: 16px;
+    color: #db4141!important;
+    margin-bottom: 5px !important;
+    margin-top: 5px;
+    text-align: left;
+    font-family: "Open Sans",sans-serif;
+  
+}
+
+.getaquote .validation {
+    font-size: 16px;
+    color: #db4141!important;
+    margin-bottom: 5px !important;
+    margin-top: 5px;
+    text-align: left;
+    font-family: "Open Sans",sans-serif;
+  
+}
+  
+/* Mensaje de éxito */
+#sendmessage {
+    display: none;
+    color: #155724;
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+}
+#sendmessage.show {
+    display: block;
+}
+  
+/* Mensaje de error general */
+#errormessage {
+    display: none;
+    color: #721c24;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+}
+#errormessage.show {
+    display: block;
+}
+  
+#sendmessage_newsletter_footer {
+    display: none;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 4px;
+    display: block;
+    min-height: 18px;
+}
+#sendmessage_newsletter_footer.show  {
+    display: block;
+}
+  
+/* Mensaje de error newsletter */
+#errormessage_newsletter_footer {
+    display: none;
+    color: #d93025;
+    font-size: 16px;
+    margin-top: 4px;
+    display: block;
+    min-height: 18px;
+}
+#errormessage_newsletter_footer.show {
+    display: block;
+}
   
 
 

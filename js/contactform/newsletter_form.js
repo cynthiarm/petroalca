@@ -1,51 +1,61 @@
 $(document).ready(function () {
-  $("#newsletter_form").on("submit", function (e) {
-    e.preventDefault();
 
-    var $form = $(this);
+    var msgEmpty = "Please enter an email address.";
+    var msgInvalid = "Please enter a valid email address.";
+    var action = "newsletter_form.php";
 
-    // Evitar doble envío
-    if ($form.data("sending") === true) return false;
-    $form.data("sending", true);
+    $("#newsletter_form_footer").submit(function (e) {
+        e.preventDefault();
 
-    var email = $form.find("input[name='newsletter_email']").val().trim();
-    var validationDiv = $form.find(".validation");
+        var $form = $(this);
 
-    validationDiv.html("").hide();
+        if ($form.data("sending") === true) return false;
+        $form.data("sending", true);
 
-    // Validación básica
-    if (email === '') {
-        validationDiv.html(msgEmpty).show();
-        $form.data("sending", false);
+        var email = $("#newsletter_email_footer").val().trim();
+        var validationDiv = $("#errormessage_newsletter_footer");
+
+        validationDiv.removeClass("show").html("");
+
+        if (email === "") {
+            validationDiv.addClass("show").html(msgEmpty);
+            $form.data("sending", false);
+            return false;
+        }
+
+        var emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+        if (!emailExp.test(email)) {
+            validationDiv.addClass("show").html(msgInvalid);
+            $form.data("sending", false);
+            return false;
+        }
+
+        var str = $form.serialize();
+
+        $.ajax({
+            type: "POST",
+            url: action,
+            data: str,
+            success: function (msg) {
+                msg = msg.trim();
+
+                if (msg === "OK_NEWSLETTER_EN") {
+                    $("#sendmessage_newsletter_footer").addClass("show").html("Thanks for subscribing!");
+                    $("#errormessage_newsletter_footer").removeClass("show").html("");
+                    $form[0].reset();
+                } else {
+                    $("#errormessage_newsletter_footer").addClass("show").html(msg);
+                }
+
+                $form.data("sending", false);
+            },
+            error: function () {
+                $("#errormessage_newsletter_footer").addClass("show").html("❌ Connection Error.");
+                $form.data("sending", false);
+            }
+        });
+
         return false;
-    }
+    });
 
-    var emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
-    if (!emailExp.test(email)) {
-        validationDiv.html(msgInvalid).show();
-        $form.data("sending", false);
-        return false;
-    }
-
-      $.ajax({
-          type: "POST",
-          url: action,
-          data: str,
-          success: function (msg) {
-              msg = msg.trim();
-              if (msg === "OK_NEWSLETTER_EN") {
-                  $("#sendmessage_newsletter").addClass("show").html("Thanks for subscribing!");
-                  $("#errormessage_newsletter").removeClass("show").html("");
-                  $('#newsletter_form')[0].reset();
-              } else {
-                  $("#errormessage_newsletter").addClass("show").html(msg);
-              }
-              $("#newsletter_form").data("sending", false);
-          },
-          error: function () {
-              $("#errormessage_newsletter").addClass("show").html("❌ Connection Error.");
-              $("#newsletter_form").data("sending", false);
-          }
-      });
-  });
 });

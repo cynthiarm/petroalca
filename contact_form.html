@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Thanks for subscribing!</title>
+  <title>Someone is trying to reach you by using your Petroalca LLC website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body style="margin:0; padding:0; background:#f2f4f7; font-family: Arial, sans-serif;">
@@ -15,27 +15,29 @@
           <tr>
             <td align="center" style="background:#060315; padding:30px;">
               <img src="cid:logoimg" alt="Logo">
-              <h1 style="margin:0; font-size:22px; color:#ffffff; font-weight:bold;">Welcome to Petroalca LLC!</h1>
+              <h1 style="margin:0; font-size:22px; color:#ffffff; font-weight:bold;">New Contact Message</h1>
             </td>
           </tr>
           
           <!-- Content -->
           <tr>
             <td style="padding:30px; color:#333333; font-size:15px; line-height:1.6;">
-              <p style="margin:0 0 16px;">Hi {{name}},</p>
-              <p style="margin:0 0 16px;">Thanks for subscribing to our newsletter. 🎉</p>
-              <p style="margin:0 0 16px;">From now on, you’ll receive our latest <b>news</b> straight to your inbox.</p>
               
               <!-- Call to Action -->
-              <div style="text-align:center; margin:30px 0;">
-                <a href="{{cta_url}}" target="_blank" 
-                   style="background:#fa3312; color:#ffffff; text-decoration:none; padding:12px 24px; border-radius:6px; font-weight:bold; font-size:14px; display:inline-block;">
-                   Explore Now
-                </a>
-              </div>
-              
-              <p style="margin:0;">Thanks for joining us!<br>
-              — The Petroalca LLC Team</p>
+
+            
+                <!-- CONTENT -->
+                <div class="content">
+                  <p><span class="highlight">Name:</span> {{name}}</p>
+                  <p><span class="highlight">E-mail:</span> {{email}}</p>
+                  <p><span class="highlight">Subject:</span> {{subject}}</p>
+                  <p><span class="highlight">Message:</span>{{message}}</p>
+            
+                  <!-- Botón de respuesta rápida -->
+                  <p style="text-align: center;">
+                    <a href="mailto:{{email}}" target="_blank" style="background:#fa3312; color:#ffffff; text-decoration:none; padding:12px 24px; border-radius:6px; font-weight:bold; font-size:14px; display:inline-block;"> Reply to Customer</a>
+                  </p>
+             </div>
             </td>
           </tr>
           

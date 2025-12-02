@@ -21,8 +21,8 @@ try {
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $emailTo = $_POST['email'];
+    $email = $_POST['email_quote'];
     $phone = $_POST['phone'];
-    $email = $_POST['email'];
     $subject = $_POST['subject'];
     $bodyEmail = $_POST['message'];
 
@@ -59,8 +59,8 @@ try {
     // Adjuntar el logo al correo
     $mail->AddEmbeddedImage(__DIR__ . '/img/logo/petroalca-logo -350x.png', 'logoimg');
 
-    $template = file_get_contents(__DIR__ . '/contact_form.html');
-    $mail->Subject = "Someone is trying to reach you by using your Petroalca LLC website!";
+    $template = file_get_contents(__DIR__ . '/quote_form.html');
+    $mail->Subject = "Someone is interested in Petroalca Services do not miss this opportunity!";
 
     // Reemplazar variables dinámicas
     $replacements = [
@@ -74,8 +74,8 @@ try {
 
     // Reemplazar placeholders en la plantilla
     $mail->Body = str_replace(
-        ["{{name}}", "{{email}}", "{{subject}}", "{{message}}"],
-        [$name, $email, $subject, nl2br($bodyEmail)],
+        ["{{firstname}}", "{{lastname}}", "{{email}}","{{phone}}", "{{subject}}", "{{message}}"],
+        [$firstname, $lastname, $email, $phone, $subject, nl2br($bodyEmail)],
         $template
     );
 
@@ -83,7 +83,7 @@ try {
 
     // Enviar correo
     if($mail->send()){
-        echo "OK_CONTACT_EN";
+        echo "OK_QUOTE_EN";
     } else {
         echo "❌ Error sending email.";
     }
